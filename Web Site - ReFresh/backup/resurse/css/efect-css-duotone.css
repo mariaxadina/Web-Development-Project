@@ -1,0 +1,29 @@
+.efect-css-duotone {
+  position: relative;
+  width: auto;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  background-image: url("/resurse/imagini/piramida.jpg");
+  background-size: cover;
+  transition: filter 0.5s ease;
+}
+.efect-css-duotone::before, .efect-css-duotone::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: screen;
+  transition: background-color 0.5s ease;
+}
+.efect-css-duotone::before {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.efect-css-duotone::after {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+.efect-css-duotone:hover {
+  filter: grayscale(100%);
+}

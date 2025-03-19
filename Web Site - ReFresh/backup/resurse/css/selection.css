@@ -1,0 +1,9 @@
+:root {
+  --text-selection-color: #1805a9;
+  --text-selection-background: #f595e9;
+}
+
+::selection {
+  color: var(--text-selection-color);
+  background: var(--text-selection-background);
+}
