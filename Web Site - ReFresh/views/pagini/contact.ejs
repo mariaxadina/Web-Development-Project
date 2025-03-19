@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title> ReFresh </title>
+        <meta name="keywords" content="Produse Alimentare, Fructe, Legume, Proaspat, Produse vegane, Produse lactate">
+        <meta name="description" content="Fa-ti cumparaturile de pe cel mai fresh magazin online de produse alimentare. Aici gasesti tot ceea ce ai nevoie pentru a-ti prepara mesele tale favorite. Livrare in 24 ore la usa ta. ">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+        <%- include("../fragmente/head.ejs");  %> 
+</head>
+<body class="pagina-cu-background-fix">
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <section class="hartaSectiune">
+              <link rel="stylesheet" href="resurse/css/general.css" type="text/css" />
+              <h3>Sediu</h3>
+              <span>Adresa: <i><a
+                    href="https://www.google.com/maps/dir//Strada+Academiei+14,+Bucure%C8%99ti+010014/@44.968222,25.2360916,9z/data=!4m8!4m7!1m0!1m5!1m1!1s0x40b1ff472f372acd:0xb7e6e278a72d3fb4!2m2!1d26.0996322!2d44.4351979?entry=ttu"
+                    target="_blank">Strada Academiei nr. 14, București 010014</a></i></span> <br>
+              <span><b>Locație</b></span><br>
+              <div class="harta-locatie">
+                <figure>
+                  <picture>
+                    <img src="resurse/imagini/harta.png" alt="Locatia sediului pe harta">
+                  </picture>
+                  <figcaption><i>Hartă</i></figcaption>
+                </figure>
+              </div>
+              <p><span><b>Date de contact</b><br><br>
+                  <i class="fa-regular fa-envelope fa-fade"></i> <a href="mailto:refresh@contact.ro"> Mail ReFresh</a>
+                  <i class="fa-solid fa-phone fa-fade"></i> <a href="tel:+40725015445"> Telefon</a>
+                  <i class="fa-brands fa-whatsapp fa-fade"></i><a href="https://wa.me/0725015445">WhatsApp</a>
+                </span></p>
+              <p><span><b>Program</b></span></p>
+              <div class="orar">
+                <table id="stilizare-tabel">
+                  <caption><b>Program de lucru Call Center</b></caption>
+                  <thead aria-rowspan="2">
+                    <tr>
+                      <th rowspan="2">Tip</th>
+                      <th colspan="2">Orar</th>
+                      <th rowspan="2">Pauza de masa</th>
+                    </tr>
+                    <tr>
+                      <th>Zi</th>
+                      <th>Interval</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="5">Zi lucratoare</td>
+                      <td>Luni</td>
+                      <td>8:00-17:00</td>
+                      <td>12:00-12:30</td>
+                    </tr>
+                    <tr>
+                      <td>Marti</td>
+                      <td>9:00-18:00</td>
+                      <td>12:00-12:30</td>
+                    </tr>
+                    <tr>
+                      <td>Miercuri</td>
+                      <td>8:00-19:00</td>
+                      <td>12:00-12:30</td>
+                    </tr>
+                    <tr>
+                      <td>Joi</td>
+                      <td>9:00-17:00</td>
+                      <td>12:00-12:30</td>
+                    </tr>
+                    <tr>
+                      <td>Vineri</td>
+                      <td>10:00-16:00</td>
+                      <td>13:00-13:30</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">Weekend</td>
+                      <td>Sambata</td>
+                      <td>9:00-17:00</td>
+                      <td>12:00-12:30</td>
+                    </tr>
+                    <tr>
+                      <td>Duminica</td>
+                      <td>10:00-16:00</td>
+                      <td>13:00-13:30</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="6">In zilele de sarbatoare, nu se lucreaza.</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+      
+            </section> 
+        </section>
+        <h1>Trimite un mesaj către site</h1>
+			<p>Mesajele nu sunt moderate (n-avem timp de așa ceva - noi facem prăjituri!), 
+                așa că, pentru sănătatea dumneavoastră mentală vă sfătuim călduros să nu citiți ce e scris sub formularul de contact. 
+                Iar dacă nu ne-ați ascultat sfatul și ați citit, vă reamintim că remediul cel mai bun contra stresului și PTSD-ului, sunt prăjiturile.
+            Vă mai așteptăm! :)</p>
+
+            <form method="post" action="/contact">
+                <label>Mesajul dumneavoastră:<br/>
+                    <textarea cols="30" rows="5" name="mesaj" placeholder="Scrieți tot ce aveți pe suflet!"></textarea>
+                </label><br/>
+                <input type="submit" value="Trimite mesajul!">
+            </form>
+			<section>
+				<h2>Mesaje:</h2>
+				<% if (locals.mesaje) {
+					var mesajeSort=locals.mesaje.sort(function(a,b) {return (new Date(b.attributes.data)).getTime()-(new Date(a.attributes.data)).getTime()})
+					for (let msg of mesajeSort) { 
+						let dt=new Date(msg.attributes.data);
+						%>
+						<article class="mesaj-c">
+							<h3><span class="username"><%= msg.attributes.username%></span> spune:</h3>
+							<p><%= msg.elements[0].text %></p>
+							<p><small><time datetime="<%= dt.getUTCDate() %>"><%= dt.toLocaleString('ro-RO', {
+														weekday: 'long', 
+														day: 'numeric',
+														year: 'numeric', 
+														month: 'long', 
+														hour: 'numeric',
+														minute: 'numeric', 
+														second: 'numeric',
+													}) %></time></small>
+							</p>
+						</article>
+					<% } %>
+				<% } %>
+			</section>
+    </main>
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>

@@ -1,0 +1,92 @@
+$primary: rgb(102, 76, 76);
+$secondary: rgb(251, 187, 251);
+$dark-color: rgb(87, 85, 82);
+$light-color: #fff;
+$dark-color2: #040339;
+$light-color2: #dadada;
+$dark-color3: #000002;
+$light-color3: #f3e4e4;
+$light-color4: #999191;
+
+$input-height: 1.5rem;
+$input-font-size: 1rem;
+
+
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with ($primary: $primary,
+  $secondary: $secondary,
+  $body-bg: $light-color,
+  $body-color: $dark-color );
+
+$html-font-family: 'Segoe UI', sans-serif;
+
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+
+$border-radius: 0.5rem;
+
+
+
+body {
+  background-color: $light-color;
+  color: $dark-color
+}
+
+.dark-mode {
+  background-color: $dark-color;
+  color: $light-color;
+
+  p {
+    color: white;
+  }
+
+  .btn-outline-primary {
+    --bs-btn-color: white;
+    background-color: rgb(138, 129, 129);
+  }
+
+  .btn-outline-primary:hover {
+    background-color: rgb(184, 174, 174);
+  }
+
+  .btn-primary {
+    --bs-btn-color: white;
+    background-color: rgb(138, 129, 129);
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(184, 174, 174);
+  }
+
+  .form-control {
+    background-color: rgb(138, 129, 129);
+  }
+
+  header {
+    background-color: $light-color2;
+    color: $dark-color2;
+  }
+}
+
+.light-mode {
+  background-color: $light-color3;
+  color: $dark-color3;
+
+  header {
+    background-color: $light-color4;
+    color: $dark-color3;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+ background-color: $primary;
+}

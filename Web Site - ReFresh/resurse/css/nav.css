@@ -1,0 +1,109 @@
+.meniu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 5em;
+  /* ul.tranz {
+      transform: scaleY(.1);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+  }
+
+  &:hover + ul.tranz {
+      transform: scaleY(1);
+  } */
+}
+.meniu ul {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  align-items: center;
+}
+.meniu li {
+  position: relative;
+  cursor: pointer;
+  padding: 1em 0;
+  width: 100%;
+}
+.meniu li:hover > ul {
+  display: flex;
+  flex-direction: column;
+  border: 1px white;
+  margin: 1em 0 0 0;
+  padding: 0;
+  width: 100%;
+}
+.meniu li ul {
+  width: 100%;
+  display: none;
+  position: absolute;
+  /* ca sa il scot din container pe alt layer, sa nu imi deplaseze continutul cand devine vizibil */
+  width: 15%;
+  background-color: #2E3949;
+  z-index: 100;
+}
+.meniu li ul li {
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 1em 0;
+}
+.meniu li ul li:hover {
+  background-color: #f0f0f0;
+}
+.meniu li ul li:hover a {
+  background-color: #f0f0f0;
+  color: black;
+}
+.meniu .underline::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(to left, white, #2E3949);
+  transition: width 0.5s ease-in, left 0.5s ease-in;
+}
+.meniu .underline:hover::before {
+  width: 100%;
+  right: 0;
+  left: auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.hamburger .bar {
+  display: block;
+  margin: 4px;
+  width: 22px;
+  height: 3px;
+  background-color: #fff;
+}
+.hamburger.extend {
+  display: block;
+  height: auto;
+}
+
+#acasa-mediu {
+  display: none;
+}
+
+#ch-menu {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}

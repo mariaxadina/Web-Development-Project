@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <%- include("../fragmente/head.ejs") %>
+    <title> ReFresh </title>
+    <meta name="keywords" content="Produse Alimentare, Fructe, Legume, Proaspat, Produse vegane, Produse lactate">
+    <meta name="description"
+      content="Fa-ti cumparaturile de pe cel mai fresh magazin online de produse alimentare. Aici gasesti tot ceea ce ai nevoie pentru a-ti prepara mesele tale favorite. Livrare in 24 ore la usa ta. ">
+</head>
+
+<body>
+  <%- include("../fragmente/header.ejs") %>
+
+    <main>
+      <div id="grid-program">
+        <section id="refresh">
+          <div class="refresh-stg">
+            <h2>De ce ReFresh?</h2>
+            <div class="spatiere">
+              <p>ReFresh este site-ul nostru dedicat alimentelor proaspete si sanatoase! Suntem incantati sa-ti
+                prezentam o gama diversificata de produse proaspete de cea mai inalta calitate. Punem accent pe
+                calitate, prospetime
+                si
+                accesibilitate pentru a aduce in gospodaria ta tot necesarul pentru a-ti prepara retetele tale favorite
+                cu
+                doar cateva <i>click-uri</i>.</p>
+              <p>La noi vei găsi o varietate de produse selectate cu grijă: fructe, legume, lactate, produse vegane;
+                provenind de la producători locali și de
+                încredere, pentru a-ți oferi cea mai
+                bună experiență culinară. Ne preocupăm de fiecare detaliu, de la procesul de selecție a produselor până
+                la
+                livrarea acestora la ușa ta.</p>
+              <p>Tu alegi <abbr title="ReFresh">RF</abbr> si noi te alegem pe tine!</p>
+
+            </div>
+            <span>
+              <abbr title="ReFresh">RF</abbr> aduce in gospodaria ta cele mai calitative ingrediente cu care iti poti
+              prepara
+              cele mai bune mese sanatoase.
+            </span>
+          </div>
+
+          <div class="refresh-dr">
+            <figure class="foodimg">
+              <picture>
+                <source srcset="resurse/imagini/food-spread.jpg" media="(max-width: 700px)" />
+                <source srcset="resurse/imagini/Food-Plating.jpg" media="(max-width: 1200px)" />
+                <img src="resurse/imagini/food.jpg" alt="text" title="Retete" />
+              </picture>
+              <figcaption><i>Produse alimentare sanatoase</i></figcaption>
+            </figure>
+          </div>
+          <%- include("../fragmente/formular-login.ejs") %>
+            <%- include("../fragmente/locatie.ejs") %>
+              <%- include("../fragmente/ora-server-client.ejs") %>
+
+        </section>
+
+        <section id="calendar-evenimente">
+          <h2>Participa la evenimentele ReFresh</h2>
+          <h3>Cu fiecare comanda plasata pe site-ul nostru intrati automat in tombola!</h3>
+          <p>In fiecare saptamana ReFresh trage la sorti un bon castigator. Premiile alocate sunt :</p>
+          <ul>
+            <li>200xGhiozdane frigorifice</li>
+            <li>300xCaserole</li>
+            <li>100xIphone 15 Pro</li>
+            <li>1xCity Break in Barcelona pentru 2 persoane</li>
+          </ul>
+          <p>Comanda acum si castiga!</p>
+        </section>
+
+        <section id="anunturi">
+          <div class="text-coloane">
+            <p>La ReFresh, fiecare comandă plasată te aduce mai aproape de premii grozave! Participi automat la
+              tombolele noastre săptămânale, unde poți câștiga vouchere de cumpărături, pachete cadou cu produse
+              sănătoase și multe alte surprize. Cu fiecare achiziție, ai șansa să câștigi și să te bucuri de avantajele
+              ReFresh!
+              Știm cât de important este pentru tine să primești alimentele proaspete și la timp. De aceea, ne asigurăm
+              că toate comenzile sunt procesate rapid și livrate direct la ușa ta, în condiții optime.</p>
+          </div>
+        </section>
+
+        <section id="tabel">
+          <div class="stilizare-taburi">
+            <iframe name="ifr-video" width="420" height="236.25"
+              src="https://www.youtube.com/embed/NsQxJT2OG4k?si=fdjeo5ZTffXU2L9e" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="buton">
+              <a href="https://www.youtube.com/embed/zJgHbifIx-Q?si=KStDzA_IyySyFzoB" target="ifr-video"
+                class="buton-iframe1">Despre nutritie</a>
+              <a href="https://www.youtube.com/embed/NsQxJT2OG4k?si=fdjeo5ZTffXU2L9e" target="ifr-video"
+                class="buton-iframe1">Shopping online</a>
+            </div>
+          </div>
+
+          
+      </section>
+
+      <section id="lista-utilizatori">
+        <h2 style="text-align: center;">Super Livrare</h2>
+
+        <table class="responsive">
+          <thead>
+            <tr>
+              <th>Ziua</th>
+              <th>Interval Orar</th>
+              <th>Zona Acoperită</th>
+              <th>Tarif de Livrare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Luni</td>
+              <td>10:00 - 11:00</td>
+              <td>Bucuresti</td>
+              <td>Gratuit</td>
+            </tr>
+            <tr>
+              <td>Marti</td>
+              <td>17:00 - 19:00</td>
+              <td>Cluj-Napoca</td>
+              <td>5 lei</td>
+            </tr>
+            <tr>
+              <td>Miercuri</td>
+              <td>14:00 - 16:00</td>
+              <td>Brasov</td>
+              <td>5 lei</td>
+            </tr>
+            <tr>
+              <td>Restul Zilelor</td>
+              <td>-</td>
+              <td>Toate Zonele</td>
+              <td>20 lei</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="date-utilizatori">
+      </section>
+
+      <section id="date-site-server">
+        <div class="efect-css-duotone"></div>
+      </section>
+
+      <section id="intrebari-frecvente">
+        <video id="video-vtt" controls preload="metadata" poster="/resurse/imagini/food-guide.png" width="100%"
+          style="min-width: 300px; max-width: 800px;">
+          <source src="/resurse/vtt/healthy.mp4" type="video/mp4">
+          <source src="/resurse/vtt/healthy.webp" type="video/webp">
+          <track kind="subtitles" label="Română" src="/resurse/vtt/sub/sub_ro.vtt" srclang="ro">
+          <track kind="subtitles" label="Engleză" src="/resurse/vtt/sub/sub_en.vtt" srclang="en">
+        </video>
+
+        <div id="efect-css-reflexie-text"">
+          <div id=" text_ref"><i>Intrebări frecvente</i></div>
+        <div id="text-reflected"><i>Intrebări frecvente</i></div>
+        </div>
+
+        <section>
+          <details>
+            <summary>Ce este taxa de garanție-returnare (SGR)?</summary>
+            <p>Începând cu 30 noiembrie 2023, România adoptă Sistemul de Garanție-Returnare pentru reciclare eficientă.
+              Astfel, vom plăti o garanție de 50 de bani pentru fiecare băutură cu volum între 0,1L și 3L, marcată cu
+              simbolul „Ambalaj cu garanție”.</p>
+          </details>
+          <br>
+          <details>
+            <summary>Cum pot recupera taxa de garanție-returnare?</summary>
+            <p>Momentan, poți returna ambalajele goale, neturtite și cu eticheta intactă la orice punct de returnare din
+              magazinele offline. </p>
+          </details>
+          <br>
+          <details>
+            <summary>Cum pot lua legătura cu cineva din echipa Freshful dacă am o problemă legată de comanda mea?
+            </summary>
+            <p><b>Pe mail: </b><u>refresh@contact.ro</u> .</p>
+            <p><b>Telefonic: </b><u>+40 725015445</u> .</p>
+            <p>Programul este atasat la pagina de Contact din meniu.</p>
+            <p>În urma raportării unei probleme (Comandă incompletă/Livrare/Returnare), vei fi contactat de către
+              colegii
+              noștri din echipa Customer Support pentru o soluționare cât mai rapidă.</p>
+          </details>
+          <br>
+          <details>
+            <summary>Unde sunt depozitate produsele?</summary>
+            <p>ReFresh are un depozit ultramodern și semi-automatizat, care măsoară 20.000 de metri pătrați și este
+              dotat
+              cu echipamente de ultimă generație.
+
+            <p>Alimentele proaspete sunt depozitate în condiții riguroase de igienă, în zone dedicate, cu temperatură
+              controlată, după o verificare minuțioasă a fiecărui articol de la aprovizionare până la livrare.
+              Produsele sunt livrate rapid și în deplină siguranță în mașini cu temperatură controlată, respectând
+              lanțul
+              frigorific până la ușa clienților.</p>
+          </details>
+        </section>
+
+        <div id="container-hr">
+          <hr id="efect-css-stilizare-hr">
+        </div>
+        <section>
+          <p>Bine ai venit la ReFresh, destinația ta de încredere pentru alimente sănătoase și de calitate superioară!
+            La ReFresh, credem că o alimentație echilibrată este cheia pentru un stil de viață sănătos și fericit. De
+            aceea, ne-am dedicat să îți oferim o gamă variată de produse care să îți satisfacă toate nevoile
+            nutriționale și preferințele culinare.</p>
+        </section>
+
+      </section>
+      </div> <!-- div de la final grid-->
+
+
+
+
+
+    </main>
+
+    <a href="http://www.google.com" target="_blank">Google</a>
+    <a href="#" title="Top" id="link-top">
+      <div id="sageata">
+        <p>&#129081</p>
+      </div>
+    </a>
+
+    <%- include("../fragmente/footer.ejs") %>
+
+
+
+</body>
+
+</html>

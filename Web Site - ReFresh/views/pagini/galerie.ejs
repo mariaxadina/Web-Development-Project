@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title> ReFresh </title>
+        <meta name="keywords" content="Produse Alimentare, Fructe, Legume, Proaspat, Produse vegane, Produse lactate">
+        <meta name="description" content="Fa-ti cumparaturile de pe cel mai fresh magazin online de produse alimentare. Aici gasesti tot ceea ce ai nevoie pentru a-ti prepara mesele tale favorite. Livrare in 24 ore la usa ta. ">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+        <%- include("../fragmente/head.ejs");  %> 
+</head>
+<body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <section id="galerie-statica">
+            <h2>Galerie</h2>
+            <div id="grid-galerie">
+            <% for (let imag of locals.imagini) { %>
+                <figure>
+                    <picture>
+                        <source srcset="<%= imag.fisier_mediu %>" media="(max-width: 1200px)" />
+                        <img src="<%= imag.fisier %>" alt="a">
+                    </picture>
+                
+                <figcaption><%= imag.descriere %></figcaption>
+                </figure>
+            <% } %>
+            </div>
+        </section>
+    </main>
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>

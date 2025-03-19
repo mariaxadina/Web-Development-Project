@@ -1,0 +1,19 @@
+.text-coloane {
+    column-count: 2; 
+    column-width: 50px;
+    column-gap: 30px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    column-rule-color: #ff0202;
+}
+
+@media screen and (max-width: 900px){
+    .text-coloane{    
+    column-count: 1; 
+    column-width: 50px;
+    column-gap: 30px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    column-rule-color: #000000;
+    }
+}

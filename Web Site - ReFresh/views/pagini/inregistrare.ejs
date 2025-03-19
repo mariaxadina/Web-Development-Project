@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title> ReFresh </title>
+        <meta name="keywords" content="Produse Alimentare, Fructe, Legume, Proaspat, Produse vegane, Produse lactate">
+        <meta name="description" content="Fa-ti cumparaturile de pe cel mai fresh magazin online de produse alimentare. Aici gasesti tot ceea ce ai nevoie pentru a-ti prepara mesele tale favorite. Livrare in 24 ore la usa ta. ">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+        <%- include("../fragmente/head.ejs");  %> 
+</head>
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="/resurse/video/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <div class="afisaj">
+            <h1>Inregistrare utilizator</h1>
+            <% if(!locals.raspuns) { %>    
+    
+                <%-include("../fragmente/formular", {action: "/inregistrare"}) %>
+            <% } %>
+            
+        <% if(locals.raspuns) { %>
+        <%- locals.raspuns+"<br/>"%>
+        <% } %>
+        <% if(locals.err) { %>
+        <%- locals.err %>
+        <% } %>
+        </div>
+    
+    </main>
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>

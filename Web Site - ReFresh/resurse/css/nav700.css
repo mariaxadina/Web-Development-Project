@@ -1,0 +1,161 @@
+.foodimg img {
+    min-width: 100px;
+    height: auto;
+    max-width: 100px;
+}
+
+#grid-program {
+    grid-template-columns: 1fr;
+    gap: 1em;
+    grid-template-areas:
+        "refresh"
+        "tabel"
+        "intrebari-frecvente"
+        "calendar-evenimente"
+        "date-utilizatori"
+        "lista-utilizatori"
+        "anunturi"
+        "date-site-server";
+}
+
+.harta-locatie img {
+    height: 200px;
+    width: auto;
+}
+
+.video-pui iframe {
+    height: 200px;
+    width: auto;
+}
+
+.video-tacos iframe {
+    height: 200px;
+    width: auto;
+}
+
+.stilizare-taburi iframe {
+    height: 200px;
+    width: auto;
+}
+
+.orar {
+    width: 50%;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* Va împiedica textul să se încheie pe mai multe rânduri */
+}
+
+
+
+html {
+    padding: 0;
+}
+/*
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.hamburgerbar {
+    display: block;
+}
+.hamburgerbar .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+nav {
+    display: none;
+}*/
+
+#hamburger {
+    display: block;
+}
+#hamburger > img{
+    display: block;
+    height: 25px;
+}
+ul.meniu{
+    display:none;
+    position:absolute;
+    width:100%;
+}
+
+/*aici facem vizibil meniul cand faem click pe hamburger meniu*/
+#ch-menu:checked+ul.meniu{
+    display: block;
+    z-index: 2;
+    position: relative;
+    transform-origin: 0 0;
+    animation-name: aparitie_meniu_p;
+    animation-iteration-count:1;
+    animation-duration:0.7s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+#ch-menu:checked+ul.meniu>li>div,#ch-menu:checked+ul.meniu>li>a{
+    
+    z-index: 2;
+    position: relative;
+    transform-origin: 50% 50%;
+    animation-name: aparitie_meniu_p_btn;
+    animation-iteration-count:1;
+    animation-duration:0.7s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+/*optiunile se intind pe toata latimea containerului*/
+nav ul.meniu li{
+    width:100%;
+}
+
+/*meniul sa vina deasupra continutul de mai jos, fara sa impinga continutul*/
+nav ul.meniu>li ul{
+    position:absolute;
+    width:100%;
+    z-index:200;
+    transform:scale(1,1);
+}
+
+#ch-menu:checked+ul.meniu>li ul>*{
+    position:relative;
+    z-index:200;
+}
+nav ul.meniu>li:hover>ul{
+    
+    z-index:200;
+    animation:none;
+}
+nav input {
+    display: none;
+}
+
+
+/* pentru fiecare element din submeniu generam un triunghiulet alb inaintea lui*/
+nav ul.meniu>li li a:before{
+    content:" \25B7\00A0	";
+    color:white;
+
+}
+
+@keyframes aparitie_meniu_p{
+    0%{
+        opacity:0;
+
+    } 
+	100%{
+    	opacity:1;
+    }
+}
+
+@keyframes aparitie_meniu_p_btn{
+    0%{
+        transform:scale(0,0);
+    } 
+	100%{
+    	transform:scale(1,1);
+    }
+}

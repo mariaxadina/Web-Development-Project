@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include("../fragmente/head.ejs") %>
+        <title> ReFresh </title>
+        <meta name="keywords" content="Produse Alimentare, Fructe, Legume, Proaspat, Produse vegane, Produse lactate">
+        <meta name="description"
+            content="Fa-ti cumparaturile de pe cel mai fresh magazin online de produse alimentare. Aici gasesti tot ceea ce ai nevoie pentru a-ti prepara mesele tale favorite. Livrare in 24 ore la usa ta. ">
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+        <link href="/resurse/css/produse.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/resurse/js/produse.js"></script>
+
+
+</head>
+
+<body>
+    <%- include("../fragmente/header.ejs") %>
+
+        <main>
+            <section>
+                <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p>Brand: <span class="brand"><%- locals.prod.brand %> </span></p>
+                    <p>Categorie: <span class="val-categorie"><%- prod.tip_produs %></span></p>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                    <p>Ingrediente: <span class="ingrediente"><%- locals.prod.ingrediente %> </span></p>
+                    <p>Calorii: <span class="calorii"><%- locals.prod.calorii %> </span></p>
+                    <p>Gramaj: <span class="gramaj"><%- locals.prod.gramaj %> </span></p>
+                    <p>Lactoza: <span class="lactoza"><%- locals.prod.lactoza %> </span></p>
+                    <p>Data adăugare: <span class="categorie"><%- locals.prod.data_adaugare %> </span></p>
+                    <!-- <figure class="imag-produs">
+                        <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>   -->
+                    <figure class="imag-produs">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <!-- Carousel Inner with Dynamic Images -->
+                            <div class="carousel-inner">
+                                <% for(let i=1; i <=3; i++) { %>
+                                    <div class="carousel-item <%= i === 1 ? 'active' : '' %>">
+                                        <img src="/resurse/imagini/produse/<%- locals.prod.imagine %>/imagine<%= i %>.jpg"
+                                            class="d-block w-100" alt="Imagine <%= i %>">
+                                    </div>
+                                    <% } %>
+                            </div>
+                            <!-- Controls for navigating through the carousel -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </figure>
+
+
+                </article>
+
+            </section>
+            <br>
+            <br>
+            <section>
+                <h2>Produse similare</h2>
+                <div class="grid-produse">
+                    <% for (let prod of locals.produseSimilare) { %>
+                        <% if (prod.tip_produs === locals.prod.tip_produs) { %>
+                            <article class="produs">
+                                <h3 class="nume">Nume: <a href="/produs/<%- prod.id %>"><%- prod.nume %></a></h3>
+                                <div class="info-prod">
+                                    <p class="pret">Pret: <span class="val-pret"><%- prod.pret %></span></p>
+                                </div>
+                                <figure>
+                                    <a href="/produs/<%- prod.id %>">
+                                        <img src="/resurse/imagini/produse/<%- prod.imagine %>/imagine1.jpg"
+                                            style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]">
+                                    </a>
+                                </figure>
+                            </article>
+                        <% } %>
+                    <% } %>
+                </div>
+            </section>
+
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+produse.css main {
+    --padd-main: 1rem;
+    padding-left: var(--padd-main);
+    padding-right: var(--padd-main);
+}
+
+.grid-produse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.grid-produse .produs {
+    border-radius: 2rem;
+    box-shadow: 0px 0px 0.8rem 0.3rem grey;
+    overflow: hidden;
+}
+
+.grid-produse .produs h3 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.grid-produse .produs figure img {
+    border: 1.5px solid grey
+}
+
+.grid-produse .produs .info-prod {
+    display: flex;
+    background-color: var(--cl-marcare);
+}
+
+
+
+.produs {
+    width: 90%; 
+    height: 450px;
+    margin: 0 auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.product-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.info-prod p {
+    margin: 5px 0;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.selecteaza-cos {
+    display: inline-block;
+    background-color: var(--culoare-mov);
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.3rem;
+    border: 1px solid transparent;
+}
+
+.selecteaza-cos:hover {
+    background-color: var(--cl-marcare);
+
+    border: 1px solid var(--culoare-mov);
+}
+
+
+.produs-btn {
+    display: flex;
+    gap: 10px;
+}
+
+.keep-button,
+.delete-button {
+    cursor: pointer;
+    color: var(--dark);
+    background-color: transparent;
+    border: 0;
+}
+
+.keep-button:hover {
+    color: var(--blueLight);
+}
+
+.delete-button:hover {
+    color: var(--blueLight);
+}
+
+.keep-button i,
+.delete-button i {
+    font-size: 1.5rem;
+}

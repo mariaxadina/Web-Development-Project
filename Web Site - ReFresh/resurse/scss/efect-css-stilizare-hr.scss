@@ -1,0 +1,38 @@
+#container-hr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    #efect-css-stilizare-hr {
+        border: none;
+        height: 5px;
+        background-color: black; 
+        width: 50%; 
+        position: relative;
+        margin: 20px 0; 
+        overflow: visible; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        &::before,
+        &::after {
+            content: '✽'; 
+            position: absolute;
+            top: 0;
+            color: black; 
+            font-size: 24px; 
+            line-height: 0; 
+        }
+      
+        &::before {
+            left: -30px; 
+        }
+      
+        &::after {
+            right: -30px; 
+        }
+    }
+}
+

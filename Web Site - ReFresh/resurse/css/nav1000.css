@@ -1,0 +1,26 @@
+nav {
+    --inaltime-meniu: 2.2em;
+    --latime-buton: 120px;
+}
+
+#acasa-mediu {
+    display: block;
+}
+#acasa{
+    display: none;
+}
+
+#grid-program {
+    grid-template-columns: 1fr;
+    gap: 3em;
+    grid-template-areas:
+        "refresh"
+        "tabel"
+        "intrebari-frecvente"
+        "calendar-evenimente"
+        "date-utilizatori"
+        "lista-utilizatori"
+        "anunturi"
+        "date-site-server";
+
+}

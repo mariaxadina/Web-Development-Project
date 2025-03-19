@@ -1,0 +1,98 @@
+#grid-program {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    grid-template-areas: "refresh refresh refresh refresh"
+        "tabel tabel intrebari-frecvente intrebari-frecvente"
+        "calendar-evenimente date-utilizatori intrebari-frecvente intrebari-frecvente"
+        "lista-utilizatori date-utilizatori intrebari-frecvente intrebari-frecvente"
+        "lista-utilizatori anunturi anunturi date-site-server";
+}
+
+html {
+    padding: 0 100px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+#grid-program>* {
+    outline: 2px solid #2E3949;
+   
+}
+
+#refresh {
+    grid-area: refresh;
+}
+
+#refresh p {
+    font-size: 16px;
+
+}
+
+#produse {
+    grid-area: produse;
+}
+
+#produse p {
+    padding-left: 50px;
+    margin: 0;
+}
+
+#retete {
+    grid-area: retete;
+}
+
+#contact {
+    grid-area: contact;
+}
+
+#calendar-evenimente {
+    grid-area: calendar-evenimente;
+}
+
+#anunturi {
+    grid-area: anunturi;
+}
+
+#tabel {
+    grid-area: tabel;
+}
+
+#lista-utilizatori {
+    grid-area: lista-utilizatori;
+}
+
+#date-utilizatori {
+    grid-area: date-utilizatori;
+}
+
+#date-site-server {
+    grid-area: date-site-server;
+}
+
+#intrebari-frecvente {
+    grid-area: intrebari-frecvente;
+}
+
+@media screen and (max-width: 1200px) {
+    #grid-produse {
+        display: block;
+    }
+
+    html {
+        font-size: 12px;
+    }
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+#form_inreg label {
+    color: white;
+}

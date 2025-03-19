@@ -1,0 +1,168 @@
+#link-top {
+  position:fixed;
+  bottom: 0.7 em;
+  top: 80%;
+  right: 0.3em;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  box-sizing: border-box;
+  border-radius: 50% 50% 0 0;
+  background: #ecd9d4;
+  opacity: 50%;
+  box-shadow: inset 0 0 10px #2E3949;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+
+}
+
+#link-top:hover {
+  cursor: pointer;
+  opacity: 90%;
+  transition: opacity 300ms ease;
+}
+
+#sageata {
+  position: relative;
+  transition: transform 300ms ease;
+  font-size: 45px;
+}
+
+#sageata:hover {
+  transform: scale(1.2);
+}
+
+.stilizare-taburi {
+  display: flex;
+}
+
+.stilizare-taburi iframe {
+  width: 100%;
+  z-index: 99;
+  height: 16em;
+  border: 5px solid #a99793; 
+}
+
+.buton-iframe1 {
+  display: inline-block;
+  padding: 10px 10px 10px 60px;
+  background-color: #a99793; /* Culoarea de fundal a butonului */
+  color: #353024; 
+  text-decoration: none; 
+  border-radius:  0 5px 5px 0; 
+  border: 1px solid #d6bcb7;
+  outline: 1px solid #d6bcb7;
+  border-left: 0;
+  outline-offset: -4px;
+  position: relative;
+  left: -20%;
+  transition: transform 0.3s ease; 
+  transition: background-color 0.3s ease; /* Tranziție pentru schimbarea culorii de fundal la hover */
+}
+
+.buton-iframe1:hover {
+  background-color: #e8cdc8; /* Schimbarea culorii de fundal la hover */
+  left: 0;
+}
+
+@media print {
+  #css-printare {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 3px double black;
+    width: calc(50% - 6px); 
+    text-align: center;
+    padding: 10px;
+    background-color: white; 
+  }
+
+  img, video, iframe, .media-description {
+    display: none;
+  }
+
+  #link-top {
+    display: none;
+  }
+
+  a {
+    text-decoration: none ;
+    color: inherit;
+  }
+
+  #grid-program {
+    display: block !important;
+  }
+
+  nav {
+    page-break-after: always;
+  }
+
+  footer {
+    page-break-before: always;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  body::after {
+    content: "Topliceanu Maria-Adina";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: auto;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    z-index: 9999; 
+  }
+
+  @page :left {
+    margin-left: 2cm;
+    margin-right: 1cm;
+  }
+
+  @page :right {
+    margin-left: 1cm;
+    margin-right: 2cm;
+  }
+}
+
+
+
+#theme-selector {
+  padding: 2px;
+  font-size: 14px;
+  border: 2px solid #bbbbbb;
+  border-radius: 10px;
+  background-color: #9ebbde;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+
+#theme-selector:hover {
+  background-color: #afc5e1;
+  border-radius: 12px;
+}
+
+#mesaj-filtrare {
+  font-size: 1.1em; 
+  color: rgb(150, 129, 129); 
+  font-weight: bold; 
+  text-align: center; 
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  padding: 10px; 
+  border: 2px dashed rgb(205, 155, 155); 
+  background-color: #f5e5e5; 
+  border-radius: 10px; 
+}

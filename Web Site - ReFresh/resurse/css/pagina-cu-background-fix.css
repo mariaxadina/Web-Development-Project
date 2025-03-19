@@ -1,0 +1,15 @@
+.pagina-cu-background-fix {
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  animation: schimbare-background 14s ease-in-out infinite; 
+  background-size: cover; 
+}
+
+@keyframes schimbare-background {
+  0%, 33.33%, 100% { 
+    background-image: url("/resurse/imagini/fundal-pagina.jpg"); 
+  }
+  16.67%, 50% { 
+    background-image: url("/resurse/imagini/fundal-pagina2.jpg"); 
+  }
+}

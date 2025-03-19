@@ -1,0 +1,16 @@
+@keyframes plimbare-orizontala {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .plimbare-orizontala {
+    white-space: nowrap; 
+    overflow: hidden; 
+  }
+  
+  .plimbare-orizontala p {
+    display: inline-block; 
+    animation: plimbare-orizontala 5s linear infinite; 
+    font-size: 40px;
+    color: rgb(14, 135, 22);
+  }

@@ -1,0 +1,59 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"cale_relativa":"cereale.png",
+			"nume":"Carbohidrati",
+			"descriere":"Cereale",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"branza.png",
+			"nume":"Branzeturi gustoase",
+			"descriere":"Branzeturi",
+			"timp":"zi"			
+		},
+		{
+			"cale_relativa":"faina.png",
+			"nume":"Carbohidrati",
+			"descriere":"Produse de gatit",
+			"timp":"dimineata"		
+        },
+		{
+			"cale_relativa":"lapte.png",
+			"nume":"Lactate vegane",
+			"descriere":"Lactate",
+			"timp":"noapte"
+		},
+		{
+			"cale_relativa":"mezel.png",
+			"nume":"Mezel",
+			"descriere":"Mezeluri",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"gatit.png",
+			"nume":"Jamila",
+			"descriere":"Mancare Gatita",
+			"timp":"dimineata"
+		},
+		{
+			"cale_relativa":"legume.png",
+			"nume":"Legume sanatoase",
+			"descriere":"Legume",
+			"timp":"noapte"
+		},
+        {
+			"cale_relativa":"fructe.png",
+			"nume":"Fructe sanatoase",
+			"descriere":"Fructe",
+			"timp":"dimineata"
+		},
+        {
+			"cale_relativa":"carne.png",
+			"nume":"Carmangerie",
+			"descriere":"Carne",
+			"timp":"noapte"
+		}
+	]
+}
